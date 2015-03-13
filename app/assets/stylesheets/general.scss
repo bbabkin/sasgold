@@ -1,0 +1,240 @@
+/*---OVERRIDES---*/
+$mainfont: Oswald, sans-serif;
+
+html {
+	min-height: 100%;
+}
+body{
+	font-size:0.8em;
+	font-family: $mainfont !important;
+}
+	// -webkit-background-size: cover;
+	// -moz-background-size: cover;
+	// background-size: cover;
+	// -o-background-size: cover;
+
+.mainbox {
+
+}
+.rule {
+	padding: 0;
+	margin: 0;
+}
+/*---Layout---*/
+.relative {position:relative;height:0;}
+.absolute {position:absolute;}
+.block {display:block;width:100%;}
+.brdr {
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+}
+.pad {
+}
+.nopad {
+	padding: 0px !important;
+
+}
+.tabl td { padding: 5px;}
+.clear { clear: both; }
+.center {    text-align: center;    ; }
+.floatleft {   float:left; }
+.floatcenter {   margin: auto; }
+
+.img-border {
+	float: none;
+	margin: 0 auto 0;
+	border: #999999 solid 1px;
+}
+
+.img-left {
+	float: none;
+	margin: 0 auto 0;
+}
+.w100{width:100%!important}
+.w80{width:80%}
+.w60{width:60%}
+/*-----HR--------*/
+.greyhr{
+color: #ccc;   clear: both;   height: 10px;   background-color: #ccc;
+padding: 0;   margin: 0;   border: 0px; }
+
+.thingreyhr{
+	color: #ccc;
+	clear:both;
+	height: 2px;
+	background-color: #ccc;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+
+
+
+
+/*--------============ADMIN===========-----------*/
+.adminheader {
+    font-size: 1.4em ;
+    padding: 10px;
+    font-weight: 900;
+    font: #fff;
+}
+.admintable {
+    th{
+        background-color: #ddd;
+        text-align: center;
+        font-weight: 900;
+        border-width: 1px;
+        border-color: #555;
+        border-style: solid;
+        padding: 15px;
+    }
+    td{
+        border-width: 1px;
+        border-color: #555;
+        border-style: solid;
+        padding: 15px;
+    }
+
+    margin: 0 auto;
+    padding: 15px;
+    border-width: 2px;
+    border-color: #333;
+    border-style: solid;
+}
+
+
+
+
+
+/*-----======= Sidebar Stuff ======------*/
+
+.feedback {
+    background-color: #8f8 !important;
+    border-color: #0f0;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+
+
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}

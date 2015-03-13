@@ -1,0 +1,14 @@
+PDFs:
+%table
+  - @pdfs.each do |pdf|
+    %tr
+      %td= pdf.title
+      %td= pdf.section_key
+      %td= pdf.file.url
+      %td= link_to "edit", edit_admin_pdf_path(pdf)
+
+= form_for [:admin, @pdf] do |f|
+  = f.text_field :title
+  = f.text_field :section_key
+  = f.file_field :file
+  = f.submit

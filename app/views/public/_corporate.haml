@@ -1,0 +1,10 @@
+///////CORPORATE////////
+%li.dropdown.navbutton
+  = link_to public_corp_responsibility_path, {class: 'dropdown-toggle', "data-toggle" => 'dropdown'} do
+    Corporate
+    %span.caret
+  %ul.dropdown-menu{:role => "menu"}
+    %li.lmenuitem.dropdown_listbutton= link_to "Corporate Responsibility", public_corp_responsibility_path
+    %li.lmenuitem.dropdown_listbutton= link_to "Governance", public_governance_path
+    %li.lmenuitem.dropdown_listbutton= link_to "Whistleblower", public_whistleblower_path
+    %li.lmenuitem.dropdown_listbutton= link_to "Information", public_information_path

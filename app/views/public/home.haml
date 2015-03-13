@@ -1,0 +1,38 @@
+%container.container-fluid
+  %row
+    #maincarousel.carousel.slide.col-lg-12
+      %ol.carousel-indicators.hidden-xs
+        %li.active{"data-slide-to" => "0", "data-target" => "#maincarousel"}
+        %li{"data-slide-to" => "1", "data-target" => "#maincarousel"}
+        %li{"data-slide-to" => "2", "data-target" => "#maincarousel"}
+      / Wrapper for slides
+
+      .carousel-inner
+        .item.active=image_tag "carousel1.jpg"
+        .item=image_tag "carousel2.jpg"
+        -# - @carouselimages.each do |carouselimage|
+          -# .item
+            -# =image_tag carouselimage.image.url
+      / Controls
+      %a.left.carousel-control{"data-slide" => "prev", :href => "#maincarousel"}
+        %span.icon-prev
+      %a.right.carousel-control{"data-slide" => "next", :href => "#maincarousel"}
+        %span.icon-next
+
+    .col-lg-9
+      = @page_section_content.content.html_safe
+      = link_to "edit", edit_admin_page_section_content_path(@page_section_content.id)
+    .col-lg-3
+      .news
+        %h3 News
+        - CollectionPresenter.new(NewsItemPresenter, @news).for_items do |presenter|
+          .news_item
+            .date= presenter.date
+            .short= presenter.content
+
+      .events
+        %h3 Events
+        - CollectionPresenter.new(EventsItemPresenter, @events).for_items do |presenter|
+          .news_item
+            .date= presenter.date
+            .short= presenter.content

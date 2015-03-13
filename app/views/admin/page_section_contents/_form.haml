@@ -1,0 +1,10 @@
+%table
+  %tr
+    %th Page Section Key
+    %td= @page_section_content.page_section_key
+  %tr
+    %th Locale
+    %td= @page_section_content.locale
+  %tr
+    %th= f.label(:content, "Text Content")
+    %td= f.text_area :content, :class => "tinymce", :rows => 20, :cols => 150

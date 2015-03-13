@@ -1,0 +1,23 @@
+%li.dropdown.navbutton
+  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "timmins"}
+    Mines and Projects
+    %span.caret
+  %ul.dropdown-menu{:role => "menu"}
+    - [["Timmins", public_timmins_path], ["History", public_history_path], ["Regional Geology", public_regional_geo_path]].each do |mine|
+      - title, path = mine
+      %li.lmenuitem.dropdown_listbutton
+        = link_to title, path
+
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Timmins", controller: "public", action: "timmins"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "History", controller: "public", action: "history"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Regional Geology", controller: "public", action: "regional_geo"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Holt Mine", controller: "public", action: "holt_mine"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Holloway Mine", controller: "public", action: "holloway_mine"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Hislop Mine", controller: "public", action: "hislop_mine"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Holt Mill", controller: "public", action: "holt_mill"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Exploration", controller: "public", action: "exploration"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Taylor Project", controller: "public", action: "taylor_project"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Regional Exploration", controller: "public", action: "regional_exp"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Reserves / Resources", controller: "public", action: "reserves_resources"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Technical Reports", controller: "public", action: "tech_reports"
+    -# %li.lmenuitem.dropdown_listbutton= link_to "Gallery", controller: "public", action: "gallery"

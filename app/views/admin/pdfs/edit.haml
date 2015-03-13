@@ -1,0 +1,8 @@
+%br
+%br
+%br
+= form_for [:admin, @pdf] do |f|
+  = f.text_field :title
+  = f.text_field :section_key
+  = f.file_field :file
+  = f.submit
